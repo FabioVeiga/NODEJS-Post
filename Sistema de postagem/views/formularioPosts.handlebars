@@ -1,0 +1,13 @@
+<!--
+    definindo os atributos
+    method eh a forma que que os dados sera enviado para o BACKEND
+        GET: Sera enviado pela URL
+        POST: nao passa dados pela URL
+    action eh a  rota pra onde sera enviada os dados
+-->
+<form action="/addPost" method="POST">
+    <h1>Postagens</h1>
+    <p>Titulo:</p><input type="text" name="titulo">
+    <p>Conteudo</p> <textarea name="conteudo" rows="10" cols="30" ></textarea>
+    <p><button type="submit">Cadastrar postagens</button></p>
+</form>

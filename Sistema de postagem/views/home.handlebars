@@ -1,0 +1,19 @@
+<h1>Lista de posts</h1>
+
+<!--
+    Recebe os que esta vindo da ROTA
+    #each eh cada e o OBJ posts eh um array
+ -->
+<a href="/cadPost"> Novo post</a><br>
+{{#each posts}}
+    <small>{{dataValues.createdAt}}</small>
+    <h3>{{dataValues.titulo}}</h3>
+    <p>{{dataValues.conteudo}}</p>
+    <form action="/deletar/{{dataValues.id}}" method="get">
+        <button>Deletar</button>
+    </form>
+    <form action="/editar/{{dataValues.id}}" method="get">
+        <button>Editar</button>
+    </form>
+    <hr>
+{{/each}}
